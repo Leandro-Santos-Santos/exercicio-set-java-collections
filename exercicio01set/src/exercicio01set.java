@@ -47,8 +47,33 @@ public class exercicio01set {
         System.out.println("Elementos em ordem alfabética inversa:");
         for (String elemento : coresArcoIrisReverse) {
             System.out.println(elemento);
-
-        
         }
+    
+        //e) Exiba todas as cores que começam com a letra ”v”;
+        System.out.println("Cores que começam com a letra 'V' : ");
+        for (String cor : coresArcoIris){
+            if (cor.toLowerCase().startsWith("v")) {
+                System.out.println(cor);
+            }
+        }
+
+        //f) Remova todas as cores que não começam com a letra “v”;
+        System.out.println("Remova cores que se inicia com letra 'v'");
+        coresArcoIris.removeIf(cor -> cor.toLowerCase().startsWith("v"));
+        for (String cor: coresArcoIris) {
+                System.out.println(cor);
+        }
+       
+        //g) Limpe o conjunto;
+        System.out.println("limpar todo o conjunto");
+
+        System.out.println("Antes de limpar o conjunto" + coresArcoIris);
+        coresArcoIris.clear();
+
+        System.out.println("depois de limpar: " + coresArcoIris);
+    
+        //h) Confira se o conjunto está vazio;
+        System.out.println("O conjunto está vazio? " + coresArcoIris.isEmpty());
+
     }
 }
